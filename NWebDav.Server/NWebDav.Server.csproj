@@ -1,13 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;netstandard1.6;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
     <AssemblyName>NWebDav.Server</AssemblyName>
     <Title>NWebDav server library</Title>
     <OutputType>Library</OutputType>
     <PackageId>NWebDav.Server</PackageId>
     <Description>NWebDav.Server is a flexible WebDAV server library that can be used to expose files or other data using WebDAV.</Description>
     <PackageTags>C# .NET WebDAV Server</PackageTags>
+	<NoWarn>1701;1702;1591;5125</NoWarn>
+	<WarningLevel>2</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
@@ -37,7 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-62925-02" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>

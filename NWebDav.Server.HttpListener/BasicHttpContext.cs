@@ -7,8 +7,10 @@ using NWebDav.Server.Http;
 
 namespace NWebDav.Server.HttpListener
 {
+    /// <inheritdoc />
     public class HttpBasicContext : HttpBaseContext
     {
+        /// <inheritdoc />
         public HttpBasicContext(HttpListenerContext httpListenerContext, Func<HttpListenerBasicIdentity, IPrincipal> getPrincipal) : base(httpListenerContext.Request, httpListenerContext.Response)
         {
             // Obtain the basic identity
@@ -21,6 +23,7 @@ namespace NWebDav.Server.HttpListener
             Session = new HttpSession(principal);
         }
 
+        /// <inheritdoc />
         public HttpBasicContext(HttpListenerContext httpListenerContext, Func<HttpListenerBasicIdentity, bool> checkIdentity) : base(httpListenerContext.Request, httpListenerContext.Response)
         {
             // Obtain the basic identity
